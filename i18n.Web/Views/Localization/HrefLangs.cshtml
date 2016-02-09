@@ -1,0 +1,10 @@
+﻿@using i18n.Web.Helpers
+@model IEnumerable<string>
+@{
+    Layout = null;
+}
+@foreach (var language in Model)
+{
+    <link rel="alternate" hreflang="@language" href="@Url.LocalizedAction(language: language)" />
+}
+

@@ -1,0 +1,14 @@
+﻿@using i18n.Web.Helpers
+@using System.Globalization
+@model IEnumerable<string>
+@{
+    Layout = null;
+}
+<ul class="nav navbar-nav">
+    @foreach (var language in Model)
+    {
+        var culture = CultureInfo.GetCultureInfo(language);
+    <li><a href="@Url.LocalizedAction(language: language)"><img src="~/Content/flags/@(language).png" /> @culture.NativeName</a></li>
+    }
+</ul>
+1111

@@ -1,0 +1,16 @@
+﻿@using i18n.Web.Helpers
+@using i18n.Web.App_GlobalResources
+@model List<i18n.Web.Models.BookLocalization>
+<h1>@Strings.Index</h1>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-unstyled">
+            @foreach (var book in Model)
+            {
+            <li class="book">
+                <a href="@Url.LocalizedAction(action: "Detail", controller: "Home", routeData: new { id = book.BookId })"><h4>@book.Title</h4><img src="@book.CoverPath" width="144" height="200" /><span class="btn btn-primary btn-block">@Strings.DetailAction</span></a>
+            </li>
+            }
+        </ul>
+    </div>  
+</div>

@@ -1,0 +1,44 @@
+﻿* {
+        font-family: 'Segoe UI', Arial, sans-serif !important;
+    font-weight: lighter !important;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.book {
+    padding:20px; display:inline-block; border:1px solid gray; text-align:center;
+}
+.book img {
+    border-top:1px solid gray; border-left:1px solid gray;
+    -webkit-box-shadow: 2px 2px 0px 2px rgba(140,140,140,1);
+-moz-box-shadow: 2px 2px 0px 2px rgba(140,140,140,1);
+box-shadow: 2px 2px 0px 2px rgba(140,140,140,1);
+}
+.book span {
+    display:block;
+    margin-top:20px;
+}
+dt, dd {font-size:large;}
+dt {font-weight:bold !important; margin-top:5px;}

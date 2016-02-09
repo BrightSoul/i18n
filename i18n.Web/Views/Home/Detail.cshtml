@@ -1,0 +1,21 @@
+﻿@using i18n.Web.Helpers
+@using i18n.Web.App_GlobalResources
+@model i18n.Web.Models.BookLocalization
+<h1>@Model.Title</h1>
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Model.CoverPath" />
+    </div>
+    <div class="col-md-8">
+        <p>@Model.Description</p>
+        <dl>
+            <dt>@Strings.Author</dt>
+            <dd>@Model.Book.Author</dd>
+            <dt>@Strings.Date</dt>
+            <dd>@Model.Book.PublishingDate.ToShortDateString()</dd>
+            <dt>@Strings.Price</dt>
+            <dd>@Model.Price</dd>
+        </dl>
+        <button class="btn btn-primary">@Strings.Buy</button>
+    </div>
+</div>
